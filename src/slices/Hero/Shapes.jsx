@@ -43,9 +43,55 @@ function Geometries() {
       r: 0.3,
       geometry: new THREE.IcosahedronGeometry(3),
     },
+    {
+      position: [1, -0.75, 4],
+      r: 0.4,
+      geometry: new THREE.CapsuleGeometry(0.5, 1.6, 2, 16),
+    },
+    {
+      position: [-1.4, 2, -4],
+      r: 0.6,
+      geometry: new THREE.DodecahedronGeometry(1.5),
+    },
+    {
+      position: [-0.8, -0.75, 5],
+      r: 0.5,
+      geometry: new THREE.TorusGeometry(0.6, 0.25, 16, 32),
+    },
+    {
+      position: [1.6, 1.6, -4],
+      r: 0.7,
+      geometry: new THREE.OctahedronGeometry(1.5),
+    },
   ];
 
-  const materials = [new THREE.MeshNormalMaterial()];
+  const materials = [
+    new THREE.MeshNormalMaterial(),
+    new THREE.MeshStandardMaterial({ color: 0x6ab04c, roughness: 0 }),
+    new THREE.MeshStandardMaterial({
+      color: 0xe056fd,
+      roughness: 0.1,
+    }),
+    new THREE.MeshStandardMaterial({ color: 0xf0932b, roughness: 0 }),
+    new THREE.MeshStandardMaterial({
+      color: 0x95afc0,
+      roughness: 0.2,
+    }),
+    new THREE.MeshStandardMaterial({
+      color: 0xf9ca24,
+      roughness: 0.4,
+    }),
+    new THREE.MeshStandardMaterial({
+      color: 0xffbe76,
+      roughness: 0.4,
+      metalness: 0.5,
+    }),
+    new THREE.MeshStandardMaterial({
+      color: 0xff7979,
+      roughness: 0.4,
+      metalness: 0.5,
+    }),
+  ];
 
   return geometries.map(({ position, r, geometry }) => (
     <Geometry

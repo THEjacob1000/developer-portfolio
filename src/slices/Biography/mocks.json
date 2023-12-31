@@ -1,0 +1,52 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "split",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"value": "rough",
+				"type": "Text"
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "dear",
+				"type": "Text"
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"avatar": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+					"width": 3024,
+					"height": 3778
+				},
+				"url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+				"width": 3024,
+				"height": 3778,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]

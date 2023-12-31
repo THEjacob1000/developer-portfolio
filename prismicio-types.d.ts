@@ -128,7 +128,11 @@ interface PageDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
+  prismic.PrismicDocumentWithUID<
+    Simplify<PageDocumentData>,
+    "page",
+    Lang
+  >;
 
 /**
  * Item in *Settings → Nav Item*
@@ -179,7 +183,9 @@ interface SettingsDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  nav_item: prismic.GroupField<Simplify<SettingsDocumentDataNavItemItem>>;
+  nav_item: prismic.GroupField<
+    Simplify<SettingsDocumentDataNavItemItem>
+  >;
 
   /**
    * CTA Link field in *Settings*
@@ -434,13 +440,16 @@ type HeroSliceVariation = HeroSliceDefault;
  * - **Description**: Hero
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+export type HeroSlice = prismic.SharedSlice<
+  "hero",
+  HeroSliceVariation
+>;
 
 declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig,
+      options?: prismic.ClientConfig
     ): prismic.Client<AllDocumentTypes>;
   }
 

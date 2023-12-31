@@ -8,7 +8,10 @@ import { components } from "../../slices";
 export default function SliceSimulatorPage() {
   return (
     <SliceSimulator
-      sliceZone={(props) => <SliceZone {...props} components={components} />}
+      background="#0f172a"
+      sliceZone={(props) => (
+        <SliceZone {...props} components={components} />
+      )}
     />
   );
 }

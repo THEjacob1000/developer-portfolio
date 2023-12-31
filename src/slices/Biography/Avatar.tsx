@@ -27,15 +27,14 @@ const Avatar = ({ image, className }: AvatarProps) => {
           opacity: 1,
           duration: 1.3,
           ease: "power3.inOut",
-        }
+        },
       );
       window.onmousemove = (e) => {
         if (!component.current) return;
         const componentRect = (
           component.current as HTMLElement
         ).getBoundingClientRect();
-        const componentCenterX =
-          componentRect.left + componentRect.width / 2;
+        const componentCenterX = componentRect.left + componentRect.width / 2;
         let componentPercent = {
           x: (e.clientX - componentCenterX) / componentRect.width / 2,
         };
@@ -52,14 +51,10 @@ const Avatar = ({ image, className }: AvatarProps) => {
           .to(
             ".avatar",
             {
-              rotation: gsap.utils.clamp(
-                -2,
-                2,
-                5 * componentPercent.x
-              ),
+              rotation: gsap.utils.clamp(-2, 2, 5 * componentPercent.x),
               duration: 0.5,
             },
-            0
+            0,
           )
           .to(
             ".highlight",
@@ -68,7 +63,7 @@ const Avatar = ({ image, className }: AvatarProps) => {
               x: -10 + 20 * componentPercent.x,
               duration: 0.5,
             },
-            0
+            0,
           );
       };
     }, component);
@@ -76,11 +71,8 @@ const Avatar = ({ image, className }: AvatarProps) => {
   }, []);
 
   return (
-    <div
-      ref={component}
-      className={clsx("relative h-full w-full", className)}
-    >
-      <div className="avatar aspect-square overflow-hidden rounded-3xl border-2 border-slate-700 opacity-0f">
+    <div ref={component} className={clsx("relative h-full w-full", className)}>
+      <div className="avatar opacity-0f aspect-square overflow-hidden rounded-3xl border-2 border-slate-700">
         <PrismicNextImage
           field={image}
           className="avatar-image h-full w-full object-fill"

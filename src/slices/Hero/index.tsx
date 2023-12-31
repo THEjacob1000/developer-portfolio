@@ -38,7 +38,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             each: 0.05,
             from: "random",
           },
-        }
+        },
       );
 
       tl.fromTo(
@@ -54,7 +54,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           duration: 1,
           scale: 1,
           ease: "elastic.out(1, 0.3)",
-        }
+        },
       );
     }, component);
     return () => ctx.revert();
@@ -79,23 +79,23 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
       ref={component}
     >
-      <div className="grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center">
+      <div className="grid min-h-[70vh] grid-cols-1 items-center md:grid-cols-2">
         <Shapes />
         <div className="col-start-1 md:row-start-1">
           <h1
-            className="mb-8  font-extrabold leading-none tracking-tighter whitespace-nowrap"
+            className="mb-8  whitespace-nowrap font-extrabold leading-none tracking-tighter"
             aria-label={
               slice.primary.first_name + " " + slice.primary.last_name
             }
           >
-            <span className="block text-slate-300 text-[clamp(3rem,20vmin,20rem)]">
+            <span className="block text-[clamp(3rem,20vmin,20rem)] text-slate-300">
               {renderLetters(slice.primary.first_name, "first")}
             </span>
-            <span className="-mt-[.2em] block text-slate-500 text-[clamp(1.5rem,10vmin,10rem)]">
+            <span className="-mt-[.2em] block text-[clamp(1.5rem,10vmin,10rem)] text-slate-500">
               {renderLetters(slice.primary.last_name, "last")}
             </span>
           </h1>
-          <span className="job-title first-letter:block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl">
+          <span className="job-title bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 first-letter:block md:text-4xl">
             {slice.primary.tag_line}
           </span>
         </div>

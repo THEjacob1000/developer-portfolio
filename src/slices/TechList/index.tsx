@@ -14,8 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 /**
  * Props for `TechList`.
  */
-export type TechListProps =
-  SliceComponentProps<Content.TechListSlice>;
+export type TechListProps = SliceComponentProps<Content.TechListSlice>;
 
 /**
  * Component for "TechList" Slices.
@@ -49,7 +48,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
               : gsap.utils.random(600, 400);
           },
           ease: "power1.inOut",
-        }
+        },
       );
     }, component);
     return () => ctx.revert();
@@ -78,10 +77,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
               <span
                 className="tech-item text-8xl font-extrabold uppercase tracking-tighter"
                 style={{
-                  color:
-                    index === 7 && tech_color
-                      ? tech_color
-                      : "inherit",
+                  color: index === 7 && tech_color ? tech_color : "inherit",
                 }}
               >
                 {tech_name}

@@ -51,7 +51,7 @@ const ContentList = ({
               end: "bottom center",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       });
 
@@ -67,9 +67,7 @@ const ContentList = ({
         y: e.clientY + window.scrollY,
       };
       // Calculate speed and direction
-      const speed = Math.sqrt(
-        Math.pow(mousePos.x - lastMousePos.current.x, 2)
-      );
+      const speed = Math.sqrt(Math.pow(mousePos.x - lastMousePos.current.x, 2));
 
       let ctx = gsap.context(() => {
         // Animate the image holder
@@ -80,8 +78,7 @@ const ContentList = ({
           gsap.to(revealRef.current, {
             x: gsap.utils.clamp(0, maxX, mousePos.x - 110),
             y: gsap.utils.clamp(0, maxY, mousePos.y - 160),
-            rotation:
-              speed * (mousePos.x > lastMousePos.current.x ? 1 : -1), // Apply rotation based on speed and direction
+            rotation: speed * (mousePos.x > lastMousePos.current.x ? 1 : -1), // Apply rotation based on speed and direction
             ease: "back.out(2)",
             duration: 1.3,
           });
@@ -151,13 +148,11 @@ const ContentList = ({
           >
             <a
               href={`${urlPrefix}/${post.uid}`}
-              className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row "
+              className="flex flex-col justify-between border-t border-t-slate-100  py-10  text-slate-200 md:flex-row "
               aria-label={post.data.title || ""}
             >
               <div className="flex flex-col">
-                <span className="text-3xl font-bold">
-                  {post.data.title}
-                </span>
+                <span className="text-3xl font-bold">{post.data.title}</span>
                 <div className="flex gap-3 text-yellow-400">
                   {post.tags.map((tag, index) => (
                     <span key={index} className="text-lg font-bold">
@@ -178,9 +173,7 @@ const ContentList = ({
           className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px] w-[220px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300"
           style={{
             backgroundImage:
-              currentItem !== null
-                ? `url(${contentImages[currentItem]})`
-                : "",
+              currentItem !== null ? `url(${contentImages[currentItem]})` : "",
           }}
           ref={revealRef}
         ></div>

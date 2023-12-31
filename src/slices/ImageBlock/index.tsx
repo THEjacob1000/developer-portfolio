@@ -5,8 +5,7 @@ import { SliceComponentProps } from "@prismicio/react";
 /**
  * Props for `ImageBlock`.
  */
-export type ImageBlockProps =
-  SliceComponentProps<Content.ImageBlockSlice>;
+export type ImageBlockProps = SliceComponentProps<Content.ImageBlockSlice>;
 
 /**
  * Component for "ImageBlock" Slices.

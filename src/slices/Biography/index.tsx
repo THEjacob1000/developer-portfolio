@@ -3,17 +3,13 @@ import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
-import {
-  PrismicRichText,
-  SliceComponentProps,
-} from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import Avatar from "./Avatar";
 
 /**
  * Props for `Biography`.
  */
-export type BiographyProps =
-  SliceComponentProps<Content.BiographySlice>;
+export type BiographyProps = SliceComponentProps<Content.BiographySlice>;
 
 /**
  * Component for "Biography" Slices.

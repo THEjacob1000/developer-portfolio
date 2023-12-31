@@ -1,56 +1,56 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"value": "motion",
-				"type": "Text"
-			},
-			"content_type": {
-				"__TYPE__": "FieldContent",
-				"value": "Project",
-				"type": "Select"
-			},
-			"description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Nulla culpa mollit et enim nostrud consectetur deserunt laboris aliqua enim eu exercitation. Do elit Lorem elit sunt veniam eiusmod culpa ea Lorem minim exercitation tempor amet. Velit non fugiat velit ut eu in excepteur aute amet amet."
-						}
-					}
-				]
-			},
-			"view_more_text": {
-				"__TYPE__": "FieldContent",
-				"value": "spend",
-				"type": "Text"
-			},
-			"fallback_item_image": {
-				"__TYPE__": "ImageContent",
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
-					"width": 4752,
-					"height": 3168
-				},
-				"url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
-				"width": 4752,
-				"height": 3168,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"thumbnails": {}
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "heading": {
+        "__TYPE__": "FieldContent",
+        "value": "motion",
+        "type": "Text"
+      },
+      "content_type": {
+        "__TYPE__": "FieldContent",
+        "value": "Project",
+        "type": "Select"
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Nulla culpa mollit et enim nostrud consectetur deserunt laboris aliqua enim eu exercitation. Do elit Lorem elit sunt veniam eiusmod culpa ea Lorem minim exercitation tempor amet. Velit non fugiat velit ut eu in excepteur aute amet amet."
+            }
+          }
+        ]
+      },
+      "view_more_text": {
+        "__TYPE__": "FieldContent",
+        "value": "spend",
+        "type": "Text"
+      },
+      "fallback_item_image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+          "width": 4752,
+          "height": 3168
+        },
+        "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+        "width": 4752,
+        "height": 3168,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      }
+    },
+    "items": []
+  }
 ]

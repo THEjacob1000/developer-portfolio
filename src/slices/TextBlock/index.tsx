@@ -1,14 +1,10 @@
 import { Content } from "@prismicio/client";
-import {
-  PrismicRichText,
-  SliceComponentProps,
-} from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 /**
  * Props for `TextBlock`.
  */
-export type TextBlockProps =
-  SliceComponentProps<Content.TextBlockSlice>;
+export type TextBlockProps = SliceComponentProps<Content.TextBlockSlice>;
 
 /**
  * Component for "TextBlock" Slices.

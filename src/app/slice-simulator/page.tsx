@@ -9,9 +9,7 @@ export default function SliceSimulatorPage() {
   return (
     <SliceSimulator
       background="#0f172a"
-      sliceZone={(props) => (
-        <SliceZone {...props} components={components} />
-      )}
+      sliceZone={(props) => <SliceZone {...props} components={components} />}
     />
   );
 }

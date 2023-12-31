@@ -2,11 +2,7 @@
 
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
-import {
-  ContactShadows,
-  Float,
-  Environment,
-} from "@react-three/drei";
+import { ContactShadows, Float, Environment } from "@react-three/drei";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
@@ -111,13 +107,7 @@ function Geometries() {
   ));
 }
 
-function Geometry({
-  r,
-  position,
-  geometry,
-  materials,
-  soundEffects,
-}) {
+function Geometry({ r, position, geometry, materials, soundEffects }) {
   const meshRef = useRef();
   const [visible, setVisible] = useState(false);
   const startingMaterial = getRandomMaterial();
@@ -164,11 +154,7 @@ function Geometry({
 
   return (
     <group position={position} ref={meshRef}>
-      <Float
-        speed={5 * r}
-        rotationIntensity={6 * r}
-        floatIntensity={5 * r}
-      >
+      <Float speed={5 * r} rotationIntensity={6 * r} floatIntensity={5 * r}>
         <mesh
           geometry={geometry}
           onClick={handleClick}

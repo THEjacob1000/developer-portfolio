@@ -17,6 +17,7 @@
     "@react-three/fiber": "^8.15.12",
     "@types/three": "^0.160.0",
     "clsx": "^2.1.0",
+    "file-loader": "^6.2.0",
     "gsap": "^3.12.4",
     "next": "14.0.4",
     "react": "^18",

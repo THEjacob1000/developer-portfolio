@@ -79,9 +79,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
                 style={{
                   color: index === 7 && tech_color ? tech_color : "inherit",
                 }}
-                aria-hidden={{
-                  color: index === 7 && tech_color ? "false" : "true",
-                }}
+                aria-hidden={index === 7 && tech_color ? "false" : "true"}
               >
                 {tech_name}
               </span>

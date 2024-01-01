@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jacob's Portfolio Website
+
+## Introduction
+
+Welcome to the repository of my personal portfolio website. This site showcases my skills, projects, and experiences as a full-stack developer. It's designed to give a comprehensive overview of my professional journey, highlight my technical capabilities, and provide insights into the projects I've worked on.
+
+## Features
+
+- **Portfolio Showcase:** Detailed overview of my projects, including descriptions, technical details, and links to live demos or code repositories.
+- **About Me:** Information about my professional background, skills, and personal interests.
+- **Responsive Design:** Fully responsive layout for an optimal viewing experience on various devices and screen sizes.
+
+## Tech Stack
+
+- **Frontend:** React, Next.js, ThreeJs, GSAP
+- **Backend:** Node.js
+- **Hosting/Deployment:** Vercel
+- **Other Tools:** Git, Prismic
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js
+- npm or yarn (depending on your preference)
+
+### Installation
+
+1. Clone the repository:
+
+```sh
+git clone https://github.com/your_username/portfolio-website.git
+```
+
+2. Install dependencies:
+
+```sh
+npm install
+# or
+yarn install
+```
+
+### Running the Application
+
+To run the website on your local machine:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navigate to http://localhost:3000 (or the appropriate port) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Contributions to improve the website are always welcome. Whether it's bug fixes, feature additions, or improvements in the documentation, I value your input. Please follow these steps to contribute:
 
-## Learn More
+1. Fork the Repository
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Distributed under the MIT License. See LICENSE file for more information.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
+Jacob Sanderson - jacob.s.sanderson@gmail.com
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Project Link: https://github.com/THEjacob1000/developer-portfolio

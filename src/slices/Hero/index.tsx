@@ -1,10 +1,11 @@
 "use client";
 import Bounded from "@/components/Bounded";
-import Shapes from "./Shapes";
+// import Shapes from "./Shapes";
 import { Content, KeyTextField } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
+import dynamic from "next/dynamic";
 
 /**
  * Props for `Hero`.
@@ -14,6 +15,12 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 /**
  * Component for "Hero" Slices.
  */
+
+const Shapes = dynamic(() => import("./Shapes"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false, // Disable server-side rendering for this component
+});
+
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   const component = useRef(null);
   useEffect(() => {

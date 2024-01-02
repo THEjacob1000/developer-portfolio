@@ -4,6 +4,4 @@ module.exports = {
   exclude: ["/slice-simulator"],
   generateRobotsTxt: true, // (optional)
   changefreq: "weekly",
-  sitemapBaseFileName: "sitemap",
-  outDir: "./public/sitemaps",
 };

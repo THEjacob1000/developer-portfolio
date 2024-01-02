@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine"
@@ -22,6 +23,7 @@
     "gsap": "^3.12.4",
     "lucide-react": "^0.303.0",
     "next": "14.0.4",
+    "next-sitemap": "^4.2.3",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",

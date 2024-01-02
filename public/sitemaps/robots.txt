@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.jacobdevelops.com
+
+# Sitemaps
+Sitemap: https://www.jacobdevelops.com/sitemap.xml

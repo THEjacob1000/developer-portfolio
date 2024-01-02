@@ -168,6 +168,7 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ContactFormSlice
   | ExperienceSlice
   | ContentIndexSlice
   | TechListSlice
@@ -574,6 +575,51 @@ type BiographySliceVariation = BiographySliceDefault;
 export type BiographySlice = prismic.SharedSlice<
   "biography",
   BiographySliceVariation
+>;
+
+/**
+ * Primary content in *ContactForm → Primary*
+ */
+export interface ContactFormSliceDefaultPrimary {
+  /**
+   * Heading field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ContactForm Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactFormSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContactFormSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ContactForm*
+ */
+type ContactFormSliceVariation = ContactFormSliceDefault;
+
+/**
+ * ContactForm Shared Slice
+ *
+ * - **API ID**: `contact_form`
+ * - **Description**: ContactForm
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactFormSlice = prismic.SharedSlice<
+  "contact_form",
+  ContactFormSliceVariation
 >;
 
 /**
@@ -1003,6 +1049,10 @@ declare module "@prismicio/client" {
       BiographySliceDefaultPrimary,
       BiographySliceVariation,
       BiographySliceDefault,
+      ContactFormSlice,
+      ContactFormSliceDefaultPrimary,
+      ContactFormSliceVariation,
+      ContactFormSliceDefault,
       ContentIndexSlice,
       ContentIndexSliceDefaultPrimary,
       ContentIndexSliceVariation,

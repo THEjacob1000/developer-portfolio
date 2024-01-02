@@ -5,7 +5,8 @@ import { SliceComponentProps } from "@prismicio/react";
 /**
  * Props for `ImageBlock`.
  */
-export type ImageBlockProps = SliceComponentProps<Content.ImageBlockSlice>;
+export type ImageBlockProps =
+  SliceComponentProps<Content.ImageBlockSlice>;
 
 /**
  * Component for "ImageBlock" Slices.
@@ -17,8 +18,8 @@ const ImageBlock = ({ slice }: ImageBlockProps): JSX.Element => {
       imgixParams={{
         w: 600,
         fit: "crop",
-        "max-h": 300,
-        "max-w": 600,
+        // "max-h": 300,
+        // "max-w": 600,
       }}
     />
   );

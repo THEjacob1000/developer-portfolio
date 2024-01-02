@@ -7,6 +7,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "quietly",
 				"type": "Text"
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "thy",
+				"type": "Text"
 			}
 		},
 		"items": []

@@ -7,6 +7,7 @@ import { useState } from "react";
 import { FormEvent } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 /**
  * Props for `ContactForm`.
@@ -37,10 +38,10 @@ const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
           "content-type": "application/json",
         },
       });
-      console.log(res);
-      // if (res.ok) {
-      //   router.push("/");
-      // }
+      toast("Message sent successfully");
+      if (res.ok) {
+        router.push("/");
+      }
     } catch (error) {
       console.error("Err", error);
     }

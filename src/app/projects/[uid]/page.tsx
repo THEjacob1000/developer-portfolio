@@ -10,8 +10,17 @@ export default async function Page({ params }: { params: Params }) {
   const page = await client
     .getByUID("project", params.uid)
     .catch(() => notFound());
-
-  return <ContentBody page={page} />;
+  if (page.data.button_text && page.data.button_link) {
+    return (
+      <ContentBody
+        page={page}
+        buttonText={page.data.button_text}
+        buttonLink={page.data.button_link}
+      />
+    );
+  } else {
+    return <ContentBody page={page} />;
+  }
 }
 
 export async function generateMetadata({

@@ -35,12 +35,12 @@ export const EmailTemplate: React.FC<
     </p>
     <hr />
     <p>
-      It&apos;s recommended to verify the sender's identity before
-      responding.
+      It&apos;s recommended to verify the sender&apos;s identity
+      before responding.
     </p>
     <footer>
       <p>Best regards,</p>
-      <p>Jacob's Automated Assistant</p>
+      <p>Jacob&apos;s Automated Assistant</p>
     </footer>
   </div>
 );

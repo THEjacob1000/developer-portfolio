@@ -5,24 +5,23 @@ import { SliceComponentProps } from "@prismicio/react";
 /**
  * Props for `ImageBlock`.
  */
-export type ImageBlockProps =
-  SliceComponentProps<Content.ImageBlockSlice>;
+export type ImageBlockProps = SliceComponentProps<Content.ImageBlockSlice>;
 
 /**
  * Component for "ImageBlock" Slices.
  */
 const ImageBlock = ({ slice }: ImageBlockProps): JSX.Element => {
-  return (
-    <PrismicNextImage
-      field={slice.primary.image}
-      imgixParams={{
-        w: 600,
-        fit: "crop",
-        // "max-h": 300,
-        // "max-w": 600,
-      }}
-    />
-  );
+	return (
+		<PrismicNextImage
+			field={slice.primary.image}
+			imgixParams={{
+				w: 600,
+				fit: "crop",
+				// "max-h": 300,
+				// "max-w": 600,
+			}}
+		/>
+	);
 };
 
 export default ImageBlock;

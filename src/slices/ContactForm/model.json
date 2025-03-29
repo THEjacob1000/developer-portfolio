@@ -1,33 +1,33 @@
 {
-  "id": "contact_form",
-  "type": "SharedSlice",
-  "name": "ContactForm",
-  "description": "ContactForm",
-  "variations": [
-    {
-      "id": "default",
-      "name": "Default",
-      "docURL": "...",
-      "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
-      "primary": {
-        "heading": {
-          "type": "Text",
-          "config": {
-            "label": "Heading",
-            "placeholder": ""
-          }
-        },
-        "button_text": {
-          "type": "Text",
-          "config": {
-            "label": "Button Text",
-            "placeholder": ""
-          }
-        }
-      },
-      "items": {}
-    }
-  ]
+	"id": "contact_form",
+	"type": "SharedSlice",
+	"name": "ContactForm",
+	"description": "ContactForm",
+	"variations": [
+		{
+			"id": "default",
+			"name": "Default",
+			"docURL": "...",
+			"version": "initial",
+			"description": "Default",
+			"imageUrl": "",
+			"primary": {
+				"heading": {
+					"type": "Text",
+					"config": {
+						"label": "Heading",
+						"placeholder": ""
+					}
+				},
+				"button_text": {
+					"type": "Text",
+					"config": {
+						"label": "Button Text",
+						"placeholder": ""
+					}
+				}
+			},
+			"items": {}
+		}
+	]
 }

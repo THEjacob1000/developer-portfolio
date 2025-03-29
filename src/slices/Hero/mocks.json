@@ -1,24 +1,24 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "first_name": {
-        "__TYPE__": "FieldContent",
-        "value": "fifteen",
-        "type": "Text"
-      },
-      "last_name": {
-        "__TYPE__": "FieldContent",
-        "value": "limited",
-        "type": "Text"
-      },
-      "tag_line": {
-        "__TYPE__": "FieldContent",
-        "value": "send",
-        "type": "Text"
-      }
-    },
-    "items": []
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"first_name": {
+				"__TYPE__": "FieldContent",
+				"value": "fifteen",
+				"type": "Text"
+			},
+			"last_name": {
+				"__TYPE__": "FieldContent",
+				"value": "limited",
+				"type": "Text"
+			},
+			"tag_line": {
+				"__TYPE__": "FieldContent",
+				"value": "send",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
 ]

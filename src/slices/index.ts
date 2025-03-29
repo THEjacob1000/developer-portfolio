@@ -3,12 +3,12 @@
 import dynamic from "next/dynamic";
 
 export const components = {
-  biography: dynamic(() => import("./Biography")),
-  contact_form: dynamic(() => import("./ContactForm")),
-  content_index: dynamic(() => import("./ContentIndex")),
-  experience: dynamic(() => import("./Experience")),
-  hero: dynamic(() => import("./Hero")),
-  image_block: dynamic(() => import("./ImageBlock")),
-  tech_list: dynamic(() => import("./TechList")),
-  text_block: dynamic(() => import("./TextBlock")),
+	biography: dynamic(() => import("./Biography")),
+	contact_form: dynamic(() => import("./ContactForm")),
+	content_index: dynamic(() => import("./ContentIndex")),
+	experience: dynamic(() => import("./Experience")),
+	hero: dynamic(() => import("./Hero")),
+	image_block: dynamic(() => import("./ImageBlock")),
+	tech_list: dynamic(() => import("./TechList")),
+	text_block: dynamic(() => import("./TextBlock")),
 };

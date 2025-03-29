@@ -1,4 +1,4 @@
-import { KeyTextField, LinkField } from "@prismicio/client";
+import type { KeyTextField, LinkField } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
 import clsx from "clsx";
 import { MdArrowOutward } from "react-icons/md";
@@ -24,7 +24,7 @@ const Button = ({
 				className,
 			)}
 		>
-			<span className="absolute inset-0 z-0 h-full translate-y-9 bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0"></span>
+			<span className="absolute inset-0 z-0 h-full translate-y-9 bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0" />
 			<span className="relative flex items-center justify-center gap-2">
 				{label} {showIcon && <MdArrowOutward className="inline-block" />}
 			</span>

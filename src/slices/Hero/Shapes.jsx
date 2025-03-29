@@ -138,7 +138,7 @@ function Geometry({ r, position, geometry, materials, soundEffects }) {
 	};
 
 	useEffect(() => {
-		let ctx = gsap.context(() => {
+		const ctx = gsap.context(() => {
 			setVisible(true);
 			gsap.from(meshRef.current.scale, {
 				x: 0,
@@ -162,6 +162,7 @@ function Geometry({ r, position, geometry, materials, soundEffects }) {
 					onPointerOut={handlePointerOut}
 					visible={visible}
 					material={startingMaterial}
+					onKeyDown={handleClick}
 				/>
 			</Float>
 		</group>

@@ -1,7 +1,7 @@
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
-import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import type { Content } from "@prismicio/client";
+import { PrismicRichText, type SliceComponentProps } from "@prismicio/react";
 
 /**
  * Props for `Experience`.
@@ -21,7 +21,10 @@ const Experience = ({ slice }: ExperienceProps): JSX.Element => {
 				{slice.primary.heading}
 			</Heading>
 			{slice.items.map((item, index) => (
-				<div key={index} className="ml-6 mt-8 max-w-prose md:ml-12 md:mt-16">
+				<div
+					key={item.time_period}
+					className="ml-6 mt-8 max-w-prose md:ml-12 md:mt-16"
+				>
 					<Heading as="h3" size="sm">
 						{item.title}
 					</Heading>

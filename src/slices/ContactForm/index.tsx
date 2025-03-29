@@ -1,10 +1,10 @@
 "use client";
-import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import type { Content } from "@prismicio/client";
+import type { SliceComponentProps } from "@prismicio/react";
 import Heading from "@/components/Heading";
 import Bounded from "@/components/Bounded";
 import { useState } from "react";
-import { FormEvent } from "react";
+import type { FormEvent } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
@@ -83,7 +83,7 @@ const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
 						className="group relative flex w-fit items-center justify-center overflow-hidden rounded-md border-2 border-slate-900 bg-slate-50 px-4 py-2 font-bold text-slate-800 transition-transform ease-out hover:scale-105 mt-8"
 						type="submit"
 					>
-						<span className="absolute inset-0 z-0 h-full translate-y-10 bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0"></span>
+						<span className="absolute inset-0 z-0 h-full translate-y-10 bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0" />
 						<span className="relative flex items-center justify-center gap-2">
 							{slice.primary.button_text}{" "}
 							<MdArrowOutward className="inline-block" />

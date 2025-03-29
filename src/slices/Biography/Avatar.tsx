@@ -1,6 +1,6 @@
 "use client";
 
-import { ImageField } from "@prismicio/client";
+import type { ImageField } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import clsx from "clsx";
 import { gsap } from "gsap";
@@ -15,7 +15,7 @@ const Avatar = ({ image, className }: AvatarProps) => {
 	const component = useRef(null);
 
 	useEffect(() => {
-		let ctx = gsap.context(() => {
+		const ctx = gsap.context(() => {
 			gsap.fromTo(
 				".avatar",
 				{
@@ -35,10 +35,10 @@ const Avatar = ({ image, className }: AvatarProps) => {
 					component.current as HTMLElement
 				).getBoundingClientRect();
 				const componentCenterX = componentRect.left + componentRect.width / 2;
-				let componentPercent = {
+				const componentPercent = {
 					x: (e.clientX - componentCenterX) / componentRect.width / 2,
 				};
-				let distFromCenterX = 1 - Math.abs(componentPercent.x);
+				const distFromCenterX = 1 - Math.abs(componentPercent.x);
 
 				gsap
 					.timeline({
@@ -78,7 +78,7 @@ const Avatar = ({ image, className }: AvatarProps) => {
 					className="avatar-image h-full w-full object-fill"
 					imgixParams={{ q: 90 }}
 				/>
-				<div className="highlight absolute inset-0 hidden w-full scale-110 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 md:block"></div>
+				<div className="highlight absolute inset-0 hidden w-full scale-110 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 md:block" />
 			</div>
 		</div>
 	);

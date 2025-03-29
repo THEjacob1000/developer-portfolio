@@ -1,6 +1,6 @@
 "use client";
 
-import { Content, asImageSrc, isFilled } from "@prismicio/client";
+import { type Content, asImageSrc, isFilled } from "@prismicio/client";
 import gsap from "gsap";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -31,7 +31,7 @@ const ContentList = ({
 
 	useEffect(() => {
 		// Animate list-items in with a stagger
-		let ctx = gsap.context(() => {
+		const ctx = gsap.context(() => {
 			itemsRef.current.forEach((item, index) => {
 				gsap.fromTo(
 					item,
@@ -67,9 +67,9 @@ const ContentList = ({
 				y: e.clientY + window.scrollY,
 			};
 			// Calculate speed and direction
-			const speed = Math.sqrt(Math.pow(mousePos.x - lastMousePos.current.x, 2));
+			const speed = Math.sqrt((mousePos.x - lastMousePos.current.x) ** 2);
 
-			let ctx = gsap.context(() => {
+			const ctx = gsap.context(() => {
 				// Animate the image holder
 				if (currentItem !== null) {
 					const maxY = window.scrollY + window.innerHeight - 350;
@@ -125,11 +125,11 @@ const ContentList = ({
 
 	// Preload images
 	useEffect(() => {
-		contentImages.forEach((url) => {
-			if (!url) return;
+		for (const url of contentImages) {
+			if (!url) continue;
 			const img = new Image();
 			img.src = url;
-		});
+		}
 	}, [contentImages]);
 
 	return (
@@ -141,8 +141,12 @@ const ContentList = ({
 			>
 				{items.map((post, index) => (
 					<li
-						key={index}
-						ref={(el) => (itemsRef.current[index] = el)}
+						key={post.id}
+						ref={(el) => {
+							if (el) {
+								itemsRef.current[index] = el;
+							}
+						}}
 						onMouseEnter={() => onMouseEnter(index)}
 						className="list-item opacity-0"
 					>
@@ -154,8 +158,8 @@ const ContentList = ({
 							<div className="flex flex-col">
 								<span className="text-3xl font-bold">{post.data.title}</span>
 								<div className="flex gap-3 text-yellow-400">
-									{post.tags.map((tag, index) => (
-										<span key={index} className="text-lg font-bold">
+									{post.tags.map((tag) => (
+										<span key={tag} className="text-lg font-bold">
 											{tag}
 										</span>
 									))}
@@ -176,7 +180,7 @@ const ContentList = ({
 							currentItem !== null ? `url(${contentImages[currentItem]})` : "",
 					}}
 					ref={revealRef}
-				></div>
+				/>
 			</ul>
 		</>
 	);

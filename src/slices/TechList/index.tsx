@@ -2,8 +2,8 @@
 
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
-import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import type { Content } from "@prismicio/client";
+import type { SliceComponentProps } from "@prismicio/react";
 import React, { useEffect, useRef } from "react";
 import { MdCircle } from "react-icons/md";
 import { gsap } from "gsap";
@@ -22,7 +22,7 @@ export type TechListProps = SliceComponentProps<Content.TechListSlice>;
 const TechList = ({ slice }: TechListProps): JSX.Element => {
 	const component = useRef(null);
 	useEffect(() => {
-		let ctx = gsap.context(() => {
+		const ctx = gsap.context(() => {
 			const tl = gsap.timeline({
 				scrollTrigger: {
 					trigger: component.current,
@@ -66,14 +66,15 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
 					{slice.primary.heading}
 				</Heading>
 			</Bounded>
-			{slice.items.map(({ tech_color, tech_name }, index) => (
+			{slice.items.map(({ tech_color, tech_name }) => (
 				<div
-					key={index}
+					key={`${tech_name}-${tech_color}`}
 					className="tech-row mb-8 flex items-center justify-center gap-4 text-slate-700"
 					aria-label={tech_name || undefined}
 				>
 					{Array.from({ length: 15 }, (_, index) => (
-						<React.Fragment key={index}>
+						// biome-ignore lint/suspicious/noArrayIndexKey: This is a static list
+						<React.Fragment key={`${tech_name}-${index}`}>
 							<span
 								className="tech-item text-8xl font-extrabold uppercase tracking-tighter"
 								style={{

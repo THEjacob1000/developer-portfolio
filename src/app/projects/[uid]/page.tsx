@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createClient } from "@/prismicio";
 import ContentBody from "@/components/ContentBody";
@@ -18,9 +18,8 @@ export default async function Page({ params }: { params: Params }) {
 				buttonLink={page.data.button_link}
 			/>
 		);
-	} else {
-		return <ContentBody page={page} />;
 	}
+	return <ContentBody page={page} />;
 }
 
 export async function generateMetadata({

@@ -1,6 +1,6 @@
 import { EmailTemplate } from "@/components/EmailTemplate";
 import { Resend } from "resend";
-import * as React from "react";
+import type * as React from "react";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

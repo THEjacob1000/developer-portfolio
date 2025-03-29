@@ -1,8 +1,8 @@
 "use client";
 import Bounded from "@/components/Bounded";
 import Shapes from "./Shapes";
-import { Content, KeyTextField } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import type { Content, KeyTextField } from "@prismicio/client";
+import type { SliceComponentProps } from "@prismicio/react";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
@@ -18,7 +18,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 const Hero = ({ slice }: HeroProps): JSX.Element => {
 	const component = useRef(null);
 	useEffect(() => {
-		let ctx = gsap.context(() => {
+		const ctx = gsap.context(() => {
 			const tl = gsap.timeline();
 			tl.fromTo(
 				".name-animation",
@@ -66,7 +66,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 		return name.split("").map((letter, index) => {
 			return (
 				<span
-					key={key + index}
+					key={key + letter}
 					className={`name-animation name-animation-${key} inline-block opacity-0`}
 				>
 					{letter}
@@ -85,9 +85,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 				<div className="col-start-1 md:row-start-1">
 					<h1
 						className="mb-8  whitespace-nowrap font-extrabold leading-none tracking-tighter"
-						aria-label={
-							slice.primary.first_name + " " + slice.primary.last_name
-						}
+						aria-label={`${slice.primary.first_name} ${slice.primary.last_name}`}
 					>
 						<span className="block text-[clamp(3rem,20vmin,20rem)] text-slate-300">
 							{renderLetters(slice.primary.first_name, "first")}

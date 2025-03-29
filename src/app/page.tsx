@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";

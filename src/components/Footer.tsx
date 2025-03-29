@@ -61,7 +61,7 @@ export default async function Footer() {
 						<PrismicNextLink
 							field={settings.data.github_link}
 							className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-							aria-label={settings.data.name + " on GitHub"}
+							aria-label={`${settings.data.name} on GitHub`}
 						>
 							<FaGithub />
 						</PrismicNextLink>
@@ -70,7 +70,7 @@ export default async function Footer() {
 						<PrismicNextLink
 							field={settings.data.twitter_link}
 							className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-							aria-label={settings.data.name + " on Twitter"}
+							aria-label={`${settings.data.name} on Twitter`}
 						>
 							<FaTwitter />
 						</PrismicNextLink>
@@ -79,7 +79,7 @@ export default async function Footer() {
 						<PrismicNextLink
 							field={settings.data.linkedin_link}
 							className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-							aria-label={settings.data.name + " on LinkedIn"}
+							aria-label={`${settings.data.name} on LinkedIn`}
 						>
 							<FaLinkedin />
 						</PrismicNextLink>

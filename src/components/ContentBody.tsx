@@ -3,11 +3,11 @@ import { components } from "@/slices";
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import {
-	Content,
-	DateField,
+	type Content,
+	type DateField,
 	isFilled,
-	KeyTextField,
-	LinkField,
+	type KeyTextField,
+	type LinkField,
 } from "@prismicio/client";
 import Button from "./Button";
 

@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import React, { useState } from "react";
-import { Content, KeyTextField, asLink } from "@prismicio/client";
+import { type Content, type KeyTextField, asLink } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
 import { MdMenu, MdClose } from "react-icons/md";
@@ -27,6 +27,7 @@ export default function NavBar({
 						aria-label="Open menu"
 						className="block p-2 text-2xl text-slate-800 md:hidden"
 						onClick={() => setOpen(true)}
+						type="button"
 					>
 						<MdMenu />
 					</button>
@@ -42,6 +43,7 @@ export default function NavBar({
 						aria-expanded={open}
 						className="fixed right-4 top-3 block p-2 text-2xl text-slate-800 md:hidden "
 						onClick={() => setOpen(false)}
+						type="button"
 					>
 						<MdClose />
 					</button>

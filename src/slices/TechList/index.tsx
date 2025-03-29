@@ -4,7 +4,7 @@ import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import type { Content } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, type JSX } from "react";
 import { MdCircle } from "react-icons/md";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -19,7 +19,7 @@ export type TechListProps = SliceComponentProps<Content.TechListSlice>;
 /**
  * Component for "TechList" Slices.
  */
-const TechList = ({ slice }: TechListProps): JSX.Element => {
+const TechList = ({ slice }: TechListProps) => {
 	const component = useRef(null);
 	useEffect(() => {
 		const ctx = gsap.context(() => {

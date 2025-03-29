@@ -5,12 +5,13 @@ import ContentBody from "@/components/ContentBody";
 
 type Params = { uid: string };
 
-export default async function Page({ params }: { params: Params }) {
-	const client = createClient();
-	const page = await client
+export default async function Page(props: { params: Promise<Params> }) {
+    const params = await props.params;
+    const client = createClient();
+    const page = await client
 		.getByUID("project", params.uid)
 		.catch(() => notFound());
-	if (page.data.button_text && page.data.button_link) {
+    if (page.data.button_text && page.data.button_link) {
 		return (
 			<ContentBody
 				page={page}
@@ -19,20 +20,21 @@ export default async function Page({ params }: { params: Params }) {
 			/>
 		);
 	}
-	return <ContentBody page={page} />;
+    return <ContentBody page={page} />;
 }
 
-export async function generateMetadata({
-	params,
-}: {
-	params: Params;
-}): Promise<Metadata> {
-	const client = createClient();
-	const page = await client
+export async function generateMetadata(
+    props: {
+        params: Promise<Params>;
+    }
+): Promise<Metadata> {
+    const params = await props.params;
+    const client = createClient();
+    const page = await client
 		.getByUID("project", params.uid)
 		.catch(() => notFound());
 
-	return {
+    return {
 		title: page.data.meta_title,
 		description: page.data.meta_description,
 	};

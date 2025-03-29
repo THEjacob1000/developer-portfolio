@@ -4,7 +4,7 @@ import Shapes from "./Shapes";
 import type { Content, KeyTextField } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type JSX } from "react";
 
 /**
  * Props for `Hero`.
@@ -15,7 +15,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  * Component for "Hero" Slices.
  */
 
-const Hero = ({ slice }: HeroProps): JSX.Element => {
+const Hero = ({ slice }: HeroProps) => {
 	const component = useRef(null);
 	useEffect(() => {
 		const ctx = gsap.context(() => {

@@ -5,6 +5,8 @@ import { PrismicRichText, type SliceComponentProps } from "@prismicio/react";
 import ContentList from "./ContentList";
 import { createClient } from "@/prismicio";
 
+import type { JSX } from "react";
+
 /**
  * Props for `ContentIndex`.
  */

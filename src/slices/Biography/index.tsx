@@ -6,6 +6,8 @@ import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText, type SliceComponentProps } from "@prismicio/react";
 import Avatar from "./Avatar";
 
+import type { JSX } from "react";
+
 /**
  * Props for `Biography`.
  */
@@ -14,7 +16,7 @@ export type BiographyProps = SliceComponentProps<Content.BiographySlice>;
 /**
  * Component for "Biography" Slices.
  */
-const Biography = ({ slice }: BiographyProps): JSX.Element => {
+const Biography = ({ slice }: BiographyProps) => {
 	return (
 		<Bounded
 			data-slice-type={slice.slice_type}

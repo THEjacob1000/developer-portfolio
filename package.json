@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
+		"dev": "next dev --turbopack",
 		"build": "next build",
 		"format": "biome format --write .",
 		"postbuild": "next-sitemap",
@@ -15,39 +15,44 @@
 		"@prismicio/client": "^7.17.0",
 		"@prismicio/next": "^1.7.2",
 		"@prismicio/react": "^2.9.2",
-		"@react-three/drei": "^9.122.0",
-		"@react-three/fiber": "^8.18.0",
-		"@types/three": "^0.160.0",
+		"@react-three/drei": "^10.0.5",
+		"@react-three/fiber": "^9.1.0",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"file-loader": "^6.2.0",
 		"gsap": "^3.12.7",
 		"lucide-react": "^0.303.0",
-		"next": "14.0.4",
+		"next": "15.2.4",
 		"next-sitemap": "^4.2.3",
 		"next-themes": "^0.2.1",
-		"react": "^18.3.1",
-		"react-dom": "^18.3.1",
+		"react": "19.1.0",
+		"react-dom": "19.1.0",
 		"react-icons": "^4.12.0",
 		"resend": "^2.1.0",
 		"shadcn-ui": "^0.5.0",
 		"sonner": "^1.7.4",
 		"tailwind-merge": "^2.6.0",
 		"tailwindcss-animate": "^1.0.7",
-		"three": "^0.160.1"
+		"three": "^0.175.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@slicemachine/adapter-next": "^0.3.72",
 		"@tailwindcss/typography": "^0.5.16",
 		"@types/node": "^20.17.28",
-		"@types/react": "^18.3.20",
-		"@types/react-dom": "^18.3.5",
+		"@types/react": "19.0.12",
+		"@types/react-dom": "19.0.4",
+		"@types/three": "^0.175.0",
 		"autoprefixer": "^10.4.21",
 		"postcss": "^8.5.3",
-		"prettier-plugin-tailwindcss": "^0.5.14",
 		"slice-machine-ui": "^1.26.0",
 		"tailwindcss": "^3.4.17",
 		"typescript": "^5.8.2"
+	},
+	"pnpm": {
+		"overrides": {
+			"@types/react": "19.0.12",
+			"@types/react-dom": "19.0.4"
+		}
 	}
 }

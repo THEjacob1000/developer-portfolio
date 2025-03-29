@@ -66,7 +66,8 @@ const Hero = ({ slice }: HeroProps) => {
 		return name.split("").map((letter, index) => {
 			return (
 				<span
-					key={key + letter}
+					// biome-ignore lint/suspicious/noArrayIndexKey: My name has multiple occurances of the same letter
+					key={key + index}
 					className={`name-animation name-animation-${key} inline-block opacity-0`}
 				>
 					{letter}

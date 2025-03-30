@@ -5,18 +5,17 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import type { Content } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
 import { useRouter } from "next/navigation";
-import { createContext } from "react";
-import type { ControllerProps } from "react-hook-form";
-import {
-	Controller,
-	type FieldPath,
-	type FieldValues,
-	FormProvider as Form,
-	useForm,
-} from "react-hook-form";
+import { FormProvider as Form, useForm } from "react-hook-form";
 import { MdArrowOutward } from "react-icons/md";
 import { toast } from "sonner";
 import { z } from "zod";
+import {
+	FormControl,
+	FormField,
+	FormItem,
+	FormLabel,
+	FormMessage,
+} from "./form";
 
 /**
  * Props for `ContactForm`.
@@ -79,24 +78,36 @@ const ContactForm = ({ slice }: ContactFormProps) => {
 								control={form.control}
 								name="name"
 								render={({ field }) => (
-									<input
-										type="text"
-										placeholder="name"
-										className="prose prose-lg mt-4 w-full h-12 max-w-none rounded-md px-5 bg-background text-foreground"
-										{...field}
-									/>
+									<FormItem className="w-full">
+										<FormLabel>Name</FormLabel>
+										<FormControl>
+											<input
+												type="text"
+												placeholder="name"
+												className="prose prose-lg w-full h-12 max-w-none rounded-md px-5 bg-background text-foreground"
+												{...field}
+											/>
+										</FormControl>
+										<FormMessage />
+									</FormItem>
 								)}
 							/>
 							<FormField
 								control={form.control}
 								name="email"
 								render={({ field }) => (
-									<input
-										type="email"
-										placeholder="email"
-										className="prose prose-lg mt-4 w-full h-12 max-w-none rounded-md px-5 bg-background text-foreground"
-										{...field}
-									/>
+									<FormItem className="mt-4 md:mt-0 w-full">
+										<FormLabel>Email</FormLabel>
+										<FormControl>
+											<input
+												type="email"
+												placeholder="email"
+												className="prose prose-lg w-full h-12 max-w-none rounded-md px-5 bg-background text-foreground"
+												{...field}
+											/>
+										</FormControl>
+										<FormMessage />
+									</FormItem>
 								)}
 							/>
 						</div>
@@ -104,11 +115,17 @@ const ContactForm = ({ slice }: ContactFormProps) => {
 							control={form.control}
 							name="message"
 							render={({ field }) => (
-								<textarea
-									placeholder="message"
-									className="prose prose-lg mt-4 w-full h-40 max-w-none md:mt-10 rounded-md px-5 py-3 bg-background text-foreground"
-									{...field}
-								/>
+								<FormItem className="w-full mt-4">
+									<FormLabel>Message</FormLabel>
+									<FormControl>
+										<textarea
+											placeholder="message"
+											className="prose prose-lg w-full h-40 max-w-none rounded-md px-5 py-3 bg-background text-foreground"
+											{...field}
+										/>
+									</FormControl>
+									<FormMessage />
+								</FormItem>
 							)}
 						/>
 						<button
@@ -125,30 +142,6 @@ const ContactForm = ({ slice }: ContactFormProps) => {
 				</Form>
 			</div>
 		</Bounded>
-	);
-};
-
-type FormFieldContextValue<
-	TFieldValues extends FieldValues = FieldValues,
-	TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-> = {
-	name: TName;
-};
-
-const FormFieldContext = createContext<FormFieldContextValue>(
-	{} as FormFieldContextValue,
-);
-
-const FormField = <
-	TFieldValues extends FieldValues = FieldValues,
-	TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
->({
-	...props
-}: ControllerProps<TFieldValues, TName>) => {
-	return (
-		<FormFieldContext.Provider value={{ name: props.name }}>
-			<Controller {...props} />
-		</FormFieldContext.Provider>
 	);
 };
 

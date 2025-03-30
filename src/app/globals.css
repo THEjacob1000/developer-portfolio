@@ -86,6 +86,12 @@
 	}
 }
 
+@layer components {
+	button {
+		cursor: pointer;
+	}
+}
+
 @layer utilities {
 	.background-gradient {
 		background: radial-gradient(

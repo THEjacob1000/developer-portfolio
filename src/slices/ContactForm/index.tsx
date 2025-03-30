@@ -3,7 +3,7 @@ import type { Content } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
 import Heading from "@/components/Heading";
 import Bounded from "@/components/Bounded";
-import { useState, } from "react";
+import { useState } from "react";
 import type { FormEvent } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { useRouter } from "next/navigation";
@@ -63,21 +63,21 @@ const ContactForm = ({ slice }: ContactFormProps) => {
 							placeholder="name"
 							value={name}
 							onChange={(e) => setName(e.target.value)}
-							className="prose prose-lg mt-4 w-full h-12 max-w-none rounded-md px-5"
+							className="prose prose-lg mt-4 w-full h-12 max-w-none rounded-md px-5 bg-background text-foreground"
 						/>
 						<input
 							type="email"
 							placeholder="email"
 							value={email}
 							onChange={(e) => setEmail(e.target.value)}
-							className="prose prose-lg mt-4 w-full h-12 max-w-none rounded-md px-5"
+							className="prose prose-lg mt-4 w-full h-12 max-w-none rounded-md px-5 bg-background text-foreground"
 						/>
 					</div>
 					<textarea
 						placeholder="message"
 						value={message}
 						onChange={(e) => setMessage(e.target.value)}
-						className="prose prose-lg mt-4 w-full h-40 max-w-none md:mt-10 rounded-md px-5 py-3"
+						className="prose prose-lg mt-4 w-full h-40 max-w-none md:mt-10 rounded-md px-5 py-3 bg-background text-foreground"
 					/>
 					<button
 						className="group relative flex w-fit items-center justify-center overflow-hidden rounded-md border-2 border-slate-900 bg-slate-50 px-4 py-2 font-bold text-slate-800 transition-transform ease-out hover:scale-105 mt-8"

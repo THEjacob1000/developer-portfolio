@@ -1,10 +1,22 @@
 "use client";
 
-import * as THREE from "three";
+import type { ThreeGeometry } from "@/types/three";
+import { ContactShadows, Environment, Float } from "@react-three/drei";
+import type { ThreeEvent } from "@react-three/fiber";
 import { Canvas } from "@react-three/fiber";
-import { ContactShadows, Float, Environment } from "@react-three/drei";
-import { Suspense, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { Suspense, useEffect, useRef, useState } from "react";
+import {
+	CapsuleGeometry,
+	DodecahedronGeometry,
+	IcosahedronGeometry,
+	type Material,
+	type Mesh,
+	MeshNormalMaterial,
+	MeshStandardMaterial,
+	OctahedronGeometry,
+	TorusGeometry,
+} from "three";
 
 export default function Shapes() {
 	return (
@@ -37,52 +49,52 @@ function Geometries() {
 		{
 			position: [0, 0, 0],
 			r: 0.3,
-			geometry: new THREE.IcosahedronGeometry(3),
+			geometry: new IcosahedronGeometry(3),
 		},
 		{
 			position: [1, -0.75, 4],
 			r: 0.4,
-			geometry: new THREE.CapsuleGeometry(0.5, 1.6, 2, 16),
+			geometry: new CapsuleGeometry(0.5, 1.6, 2, 16),
 		},
 		{
 			position: [-1.4, 2, -4],
 			r: 0.6,
-			geometry: new THREE.DodecahedronGeometry(1.5),
+			geometry: new DodecahedronGeometry(1.5),
 		},
 		{
 			position: [-0.8, -0.75, 5],
 			r: 0.5,
-			geometry: new THREE.TorusGeometry(0.6, 0.25, 16, 32),
+			geometry: new TorusGeometry(0.6, 0.25, 16, 32),
 		},
 		{
 			position: [1.6, 1.6, -4],
 			r: 0.7,
-			geometry: new THREE.OctahedronGeometry(1.5),
+			geometry: new OctahedronGeometry(1.5),
 		},
 	];
 
 	const materials = [
-		new THREE.MeshNormalMaterial(),
-		new THREE.MeshStandardMaterial({ color: 0x6ab04c, roughness: 0 }),
-		new THREE.MeshStandardMaterial({
+		new MeshNormalMaterial(),
+		new MeshStandardMaterial({ color: 0x6ab04c, roughness: 0 }),
+		new MeshStandardMaterial({
 			color: 0xe056fd,
 			roughness: 0.1,
 		}),
-		new THREE.MeshStandardMaterial({ color: 0xf0932b, roughness: 0 }),
-		new THREE.MeshStandardMaterial({
+		new MeshStandardMaterial({ color: 0xf0932b, roughness: 0 }),
+		new MeshStandardMaterial({
 			color: 0x95afc0,
 			roughness: 0.2,
 		}),
-		new THREE.MeshStandardMaterial({
+		new MeshStandardMaterial({
 			color: 0xf9ca24,
 			roughness: 0.4,
 		}),
-		new THREE.MeshStandardMaterial({
+		new MeshStandardMaterial({
 			color: 0xffbe76,
 			roughness: 0.4,
 			metalness: 0.5,
 		}),
-		new THREE.MeshStandardMaterial({
+		new MeshStandardMaterial({
 			color: 0xff7979,
 			roughness: 0.4,
 			metalness: 0.5,
@@ -98,7 +110,7 @@ function Geometries() {
 	return geometries.map(({ position, r, geometry }) => (
 		<Geometry
 			key={JSON.stringify(position)}
-			position={position.map((p) => p * 2)}
+			position={position.map((p) => p * 2) as [number, number, number]}
 			soundEffects={soundEffects}
 			geometry={geometry}
 			materials={materials}
@@ -107,15 +119,29 @@ function Geometries() {
 	));
 }
 
-function Geometry({ r, position, geometry, materials, soundEffects }) {
-	const meshRef = useRef();
+interface GeometryProps {
+	r: number;
+	position: [number, number, number];
+	geometry: ThreeGeometry;
+	materials: Material[];
+	soundEffects: HTMLAudioElement[];
+}
+
+function Geometry({
+	r,
+	position,
+	geometry,
+	materials,
+	soundEffects,
+}: GeometryProps) {
+	const meshRef = useRef<Mesh>(null);
 	const [visible, setVisible] = useState(false);
 	const startingMaterial = getRandomMaterial();
 	function getRandomMaterial() {
 		return gsap.utils.random(materials);
 	}
-	function handleClick(e) {
-		const mesh = e.object;
+	function handleClick(e: ThreeEvent<MouseEvent>) {
+		const mesh = e.object as Mesh;
 
 		gsap.utils.random(soundEffects).play();
 
@@ -140,14 +166,16 @@ function Geometry({ r, position, geometry, materials, soundEffects }) {
 	useEffect(() => {
 		const ctx = gsap.context(() => {
 			setVisible(true);
-			gsap.from(meshRef.current.scale, {
-				x: 0,
-				y: 0,
-				z: 0,
-				duration: 1,
-				ease: "elastic.out(1, 0.3)",
-				delay: 0.3,
-			});
+			if (meshRef.current) {
+				gsap.from(meshRef.current.scale, {
+					x: 0,
+					y: 0,
+					z: 0,
+					duration: 1,
+					ease: "elastic.out(1, 0.3)",
+					delay: 0.3,
+				});
+			}
 		});
 		return () => ctx.revert();
 	}, []);
@@ -155,6 +183,7 @@ function Geometry({ r, position, geometry, materials, soundEffects }) {
 	return (
 		<group position={position} ref={meshRef}>
 			<Float speed={5 * r} rotationIntensity={6 * r} floatIntensity={5 * r}>
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: OnKeyDown is not supported in React Three Fiber */}
 				<mesh
 					geometry={geometry}
 					onClick={handleClick}
@@ -162,7 +191,6 @@ function Geometry({ r, position, geometry, materials, soundEffects }) {
 					onPointerOut={handlePointerOut}
 					visible={visible}
 					material={startingMaterial}
-					onKeyDown={handleClick}
 				/>
 			</Float>
 		</group>

@@ -16,11 +16,11 @@ importers:
         specifier: ^7.17.0
         version: 7.17.0
       '@prismicio/next':
-        specifier: ^1.7.2
-        version: 1.7.2(@prismicio/client@7.17.0)(next@15.2.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+        specifier: ^2.0.1
+        version: 2.0.1(@prismicio/client@7.17.0)(next@15.2.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       '@prismicio/react':
-        specifier: ^2.9.2
-        version: 2.9.2(@prismicio/client@7.17.0)(react@19.1.0)
+        specifier: ^3.2.0
+        version: 3.2.0(@prismicio/client@7.17.0)(react@19.1.0)
       '@react-three/drei':
         specifier: ^10.0.5
         version: 10.0.5(@react-three/fiber@9.1.0(@types/react@19.0.12)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(three@0.175.0))(@types/react@19.0.12)(@types/three@0.175.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(three@0.175.0)
@@ -101,8 +101,8 @@ importers:
         specifier: ^8.5.3
         version: 8.5.3
       slice-machine-ui:
-        specifier: ^1.26.0
-        version: 1.26.0(@prismicio/client@7.17.0)(@prismicio/types@0.2.9)(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(@types/uuid@9.0.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(uuid@9.0.1)
+        specifier: ^2.14.2
+        version: 2.14.2(@prismicio/types@0.2.9)
       tailwindcss:
         specifier: ^4.0.17
         version: 4.0.17
@@ -190,9 +190,6 @@ packages:
 
   '@emnapi/runtime@1.4.0':
     resolution: {integrity: sha512-64WYIf4UYcdLnbKn/umDlNjQDSS8AgZrI/R9+x5ilkUVFxXcA1Ebl+gQLc/6mERA4407Xof0R7wEyEuj091CVw==}
-
-  '@formatjs/intl-localematcher@0.5.10':
-    resolution: {integrity: sha512-af3qATX+m4Rnd9+wHcjJ4w2ijq+rAVP3CCinJQvFv1kgSu1W6jypUmvleJxcewdxmutM8dmIRZFxO/IQBZmP2Q==}
 
   '@hapi/hoek@9.3.0':
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
@@ -412,14 +409,6 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@prismicio/api-renderer@1.0.0':
-    resolution: {integrity: sha512-dD74209FaT4JB+pZkLP+69u5rFqzcuNQU9aBMN9sQ4usSbScuSbNdXL1hVasAite5r+hIiphskfxaxdfqPvDIw==}
-    engines: {node: '>=12.7.0'}
-    peerDependencies:
-      fp-ts: ^2.11.8
-      io-ts: ^2.2.16
-      io-ts-types: ^0.5.16
-
   '@prismicio/api-renderer@6.4.0':
     resolution: {integrity: sha512-ekvFTaMicpEiucYU3VtPvkl1IUZ/mNtZpvbwVM0UFGHjyYYK0GZpeU43ZXfkoYX/qmbazyNEpx5vkJ9Faaj+ZA==}
     engines: {node: '>=18'}
@@ -438,62 +427,34 @@ packages:
     peerDependencies:
       '@prismicio/client': '>=7'
 
-  '@prismicio/mocks@2.0.0':
-    resolution: {integrity: sha512-zWbAox9YEvYQNVrnOJIE0AIW/UKswtYDS+IH+Ikr36Hfn+cStKFI33n44B7xaAhX17pjSrNDzWQrSO16Vq98lg==}
-    engines: {node: '>=12.7.0'}
+  '@prismicio/custom-types-client@2.1.0':
+    resolution: {integrity: sha512-LxUTiF8nYy1V+sdCOJ8m1hx2QTlUVpTO1J4RfHriRL596h6ySKRV/ghsHoKP82XA+VhTxSS2DN1hhBHCAdsILw==}
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      '@prismicio/client': '>=7'
 
   '@prismicio/mocks@2.12.0':
     resolution: {integrity: sha512-rCB5f415We4+A22D8KZdCjtA5cibJvfTSaElAbwYuGm/HEM2Ma0rf5VzQm3mfvM6uxpheMEA0d43BrZRM0PUaw==}
     engines: {node: '>=12.7.0'}
 
-  '@prismicio/next@1.7.2':
-    resolution: {integrity: sha512-dS9fRujiqK+uyhA5vCJgvxp4k7w3s6jm5Ln4fh1NSMS00yo7lHVL4GnhNmrxqATnIn/nHLbQmO24+yZVRWvxjw==}
-    engines: {node: '>=14.15.0'}
+  '@prismicio/next@2.0.1':
+    resolution: {integrity: sha512-wIC7pNd6nmdK3ZzlF1U+XGPRER7vL1zQdasvU3USdxWO1cxjdaK3LgFrpU28YZYH2RaGHmC5Wa303faILH86HQ==}
+    engines: {node: '>=18'}
     peerDependencies:
-      '@prismicio/client': ^6 || ^7
-      next: ^13.4.5 || ^14 || ^15.0.0-rc.0
-      react: ^18 || ^19.0.0-rc.0
+      '@prismicio/client': ^7
+      next: ^13.4.5 || ^14 || ^15
+      react: ^18 || ^19
 
-  '@prismicio/react@2.9.2':
-    resolution: {integrity: sha512-aXTIYI1DNbBMaaDd4czW8foqJku2VXVGqI4n34w2BKMBPXqugCcL1dqaKtsyreza3bo0nE5C6YhUyil4rx70BA==}
-    engines: {node: '>=12.7.0'}
+  '@prismicio/react@3.2.0':
+    resolution: {integrity: sha512-oxn7EfJOhdYe2UNLymPQUNurhcV7zbeEHmG6pQ6IKI5FRqtyJB3xlqqW02Zq01YOYHVihnfNwfPXtAxAn/9E4Q==}
+    engines: {node: '>=18'}
     peerDependencies:
-      '@prismicio/client': ^6 || ^7
-      react: ^18 || ^19.0.0-rc.0
-
-  '@prismicio/richtext@2.1.5':
-    resolution: {integrity: sha512-Sf6iCsciPmfK3uQeFmeY9RTRSuhrCVzyU39OkiJ1VJn8O0531pKapGoWS+5WGxouJtE5+jGqV8L+L2mKP7NkXQ==}
-    engines: {node: '>=12.7.0'}
+      '@prismicio/client': ^7
+      react: ^18 || ^19
 
   '@prismicio/simulator@0.1.4':
     resolution: {integrity: sha512-aBDwGghM8LqXOvdbJWJScBTpY8wuVl3CyCWFqiFwqC8l5SPrQtD2CwEVX0UCB0azPlisb7l7al5Wcg2nxQ6xrQ==}
     engines: {node: '>=14.15.0'}
-
-  '@prismicio/types-internal@1.5.3':
-    resolution: {integrity: sha512-GHV2rZsCUJJQDF7gF2to0F/3eolTXD/ng7ClfbqtHO3udJ5D+iifocAEnsEdi+Y9VKT/WVgyBi/dA6GAhNMHmQ==}
-    engines: {node: '>=12.7.0'}
-    peerDependencies:
-      fp-ts: ^2.11.8
-      io-ts: ^2.2.16
-      io-ts-types: ^0.5.16
-
-  '@prismicio/types-internal@2.0.0-alpha.8':
-    resolution: {integrity: sha512-mTyzwnDrOJMl7m5FkpoCIfF7x1kOnQ4vUspcYa5Qj18r8QY2djhRzBcMtIttMlUM5ZbLJBXtyVXeHftHuODb1Q==}
-    engines: {node: '>=12.7.0'}
-    peerDependencies:
-      fp-ts: ^2.11.8
-      io-ts: ^2.2.16
-      io-ts-types: ^0.5.16
-
-  '@prismicio/types-internal@2.8.0':
-    resolution: {integrity: sha512-CkqBaKy0UcEgTJC37rqQlQUpbnEENcPR4XLlBQAdxOGLtFdgejE0cuZWea2DDrg0HUPxB+WQ+NmwhQYwTDhrkA==}
-    engines: {node: '>=12.7.0'}
-    peerDependencies:
-      '@types/uuid': ^9.0.2
-      fp-ts: ^2.11.8
-      io-ts: ^2.2.16
-      io-ts-types: ^0.5.16
-      uuid: ^9.0.0
 
   '@prismicio/types-internal@3.8.0':
     resolution: {integrity: sha512-1o7pumA1gp/84dxh9a2hw4DFvPtmz3GnGFgKYQUUOUecGkzhEDL43AQG3FfsYYgnoM4KSXrLG0QF1fEkzoMosA==}
@@ -506,50 +467,6 @@ packages:
   '@prismicio/types@0.2.9':
     resolution: {integrity: sha512-1uhHnZTiGeCi+rmO507B8jtnUTCNetdgrC5sfZEw9zsCplfgBELt0+BN1RFsXWLbZbyvR9xzHcrJ87Ykqa8JZA==}
     engines: {node: '>=12.7.0'}
-
-  '@radix-ui/react-compose-refs@1.0.1':
-    resolution: {integrity: sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==}
-    peerDependencies:
-      '@types/react': 19.0.12
-      react: ^16.8 || ^17.0 || ^18.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-
-  '@radix-ui/react-primitive@1.0.3':
-    resolution: {integrity: sha512-yi58uVyoAcK/Nq1inRY56ZSjKypBNKTa/1mcL8qdl6oJeEaDbOldlzrGn7P6Q3Id5d+SYNGc5AJgc4vGhjs5+g==}
-    peerDependencies:
-      '@types/react': 19.0.12
-      '@types/react-dom': 19.0.4
-      react: ^16.8 || ^17.0 || ^18.0
-      react-dom: ^16.8 || ^17.0 || ^18.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      '@types/react-dom':
-        optional: true
-
-  '@radix-ui/react-slot@1.0.2':
-    resolution: {integrity: sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==}
-    peerDependencies:
-      '@types/react': 19.0.12
-      react: ^16.8 || ^17.0 || ^18.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-
-  '@radix-ui/react-visually-hidden@1.0.3':
-    resolution: {integrity: sha512-D4w41yN5YRKtu464TLnByKzMDG/JlMPHtfZgQAu9v6mNakUqGUI9vUrfQKz8NK41VMm/xbZbh76NUTVtIYqOMA==}
-    peerDependencies:
-      '@types/react': 19.0.12
-      '@types/react-dom': 19.0.4
-      react: ^16.8 || ^17.0 || ^18.0
-      react-dom: ^16.8 || ^17.0 || ^18.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      '@types/react-dom':
-        optional: true
 
   '@react-email/render@1.0.5':
     resolution: {integrity: sha512-CA69HYXPk21HhtAXATIr+9JJwpDNmAFCvdMUjWmeoD1+KhJ9NAxusMRxKNeibdZdslmq3edaeOKGbdQ9qjK8LQ==}
@@ -597,15 +514,15 @@ packages:
   '@scarf/scarf@1.4.0':
     resolution: {integrity: sha512-xxeapPiUXdZAE3che6f3xogoJPeZgig6omHEy1rIY5WVsB3H2BHNnZH+gHG6x91SCWyQCzWGsuL2Hh3ClO5/qQ==}
 
-  '@segment/analytics-core@1.3.2':
-    resolution: {integrity: sha512-NpeBCfOyMdO2/BDKfhCUNHcEwxg88N2iTnswBoEMh38rtsQ03TWLVYwgiTakPjNQFezdKkR6jq3JhQ3WWgq67g==}
+  '@segment/analytics-core@1.8.1':
+    resolution: {integrity: sha512-EYcdBdhfi1pOYRX+Sf5orpzzYYFmDHTEu6+w0hjXpW5bWkWct+Nv6UJg1hF4sGDKEQjpZIinLTpQ4eioFM4KeQ==}
 
-  '@segment/analytics-generic-utils@1.0.0':
-    resolution: {integrity: sha512-rAqcIQESnCsc80DMAxH06C4sJQ1MjwRLrWsih9qA2E0XwxydrMYgLA8eazxLW/wqEdctSJHCPnkMynpPIQgatw==}
+  '@segment/analytics-generic-utils@1.2.0':
+    resolution: {integrity: sha512-DfnW6mW3YQOLlDQQdR89k4EqfHb0g/3XvBXkovH1FstUN93eL1kfW9CsDcVQyH3bAC5ZsFyjA/o/1Q2j0QeoWw==}
 
-  '@segment/analytics-node@1.1.3':
-    resolution: {integrity: sha512-RGmD/VIW4iHqY+raeHlxdGY/FQpE6ATZHU8LrbwI+16uvT+sfw8d725J/lmzJIgNScJ/NFLg3LyHjitwPpqTxw==}
-    engines: {node: '>=14'}
+  '@segment/analytics-node@2.2.1':
+    resolution: {integrity: sha512-J+p5r2BewzowI6YsnSH6U+W9IAvRbEyheqDOSUEwh6QDbxjwcBXwzuPwtz5DtEjbEGMu2QwrwoJvZlZ/n5fugw==}
+    engines: {node: '>=18'}
 
   '@selderee/plugin-htmlparser2@0.11.0':
     resolution: {integrity: sha512-P33hHGdldxGabLFjPPpaTxVolMrzrcegejx+0GxjrIb9Zv48D8yAIA/QTDR2dFl7Uz7urX8aX6+5bCZslr+gWQ==}
@@ -626,18 +543,14 @@ packages:
       next: ^11 || ^12 || ^13 || ^14 || ^15.0.0-rc.0
       react: ^17 || ^18 || ^19.0.0-rc.0
 
-  '@slicemachine/manager@0.18.3':
-    resolution: {integrity: sha512-wsii0vpuZ7p5DJgzQWNKVuTfmD0ZlgAkRtsxNhxi2048GQls2aUsWvFka7nOH544pgzwoyHkEXWXTSvpKSz40A==}
+  '@slicemachine/manager@0.24.9':
+    resolution: {integrity: sha512-/6lEqy7rH/Ky5AyZJnOwrO3j7TD9Lcvgd7xLJYOHd4T45XtymopQItznkXZQd0AZYN/qdGxUN5Yzm+JWsvJLbQ==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       msw: ^1.1.0
     peerDependenciesMeta:
       msw:
         optional: true
-
-  '@slicemachine/plugin-kit@0.4.38':
-    resolution: {integrity: sha512-X7yVniUnj4J2ZOPkYSgPu4M3MQ8m/oQvW2T8uzvGV1wUxjgCaWaRBs9W8dH07iKVrg8++6l/B8XX03IjT27ySA==}
-    engines: {node: '>=14.15.0'}
 
   '@slicemachine/plugin-kit@0.4.71':
     resolution: {integrity: sha512-UZXTRxB+7JpHazj2kBhHfk5hvIfzZdl18BJNJfZd9wRyCFnE1whqMHZOo5yOeh4U4Tz+0QPB8K0Ee8aQ+H1x0w==}
@@ -757,9 +670,6 @@ packages:
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
 
-  '@types/node@20.17.28':
-    resolution: {integrity: sha512-DHlH/fNL6Mho38jTy7/JT7sn2wnXI+wULR6PV4gy4VHLVvnrV/d3pHAMQHhc4gjdLmK2ZiPoMxzp6B3yRajLSQ==}
-
   '@types/node@22.13.14':
     resolution: {integrity: sha512-Zs/Ollc1SJ8nKUAgc7ivOEdIBM8JAKgrqqUYi2J997JuKO7/tpQC+WCetQ1sypiKCQWHdvdg9wBNpUPEWZae7w==}
 
@@ -790,9 +700,6 @@ packages:
 
   '@types/three@0.175.0':
     resolution: {integrity: sha512-ldMSBgtZOZ3g9kJ3kOZSEtZIEITmJOzu8eKVpkhf036GuNkM4mt0NXecrjCn5tMm1OblOF7dZehlaDypBfNokw==}
-
-  '@types/uuid@9.0.8':
-    resolution: {integrity: sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==}
 
   '@types/webxr@0.5.21':
     resolution: {integrity: sha512-geZIAtLzjGmgY2JUi6VxXdCrTb99A7yP49lxLr2Nm/uIK0PkkxcEi4OGhoGDO4pxCf3JwGz2GiJL2Ej4K2bKaA==}
@@ -1024,13 +931,13 @@ packages:
   cookie-signature@1.0.6:
     resolution: {integrity: sha512-QADzlaHc8icV8I7vbaJXJwod9HWYp8uCqf1xa4OfNu1T7JVxQIrUgOWtHdNDtPiywmFbiS12VjotIXLrKM3orQ==}
 
-  cookie@0.5.0:
-    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
-    engines: {node: '>= 0.6'}
-
   cookie@0.7.1:
     resolution: {integrity: sha512-6DnInpx7SJ2AK3+CTUE/ZM0vWTUboZCegxhC2xiIydHR9jNuTAASBrfEpHhiGOZw/nX51bHt6YQl8jsGo4y/0w==}
     engines: {node: '>= 0.6'}
+
+  cookie@1.0.2:
+    resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
+    engines: {node: '>=18'}
 
   cors@2.8.5:
     resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
@@ -1187,6 +1094,9 @@ packages:
   eslint-scope@5.1.1:
     resolution: {integrity: sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==}
     engines: {node: '>=8.0.0'}
+
+  esm-env@1.2.2:
+    resolution: {integrity: sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==}
 
   esrecurse@4.3.0:
     resolution: {integrity: sha512-KmfKL3b6G+RXvP8N1vr3Tq1kL/oCFgn2NYXEtqP8/L3pKapUA4G8cFVaoF3SU323CD4XypR/ffioHmkti6/Tag==}
@@ -1406,10 +1316,6 @@ packages:
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
 
-  imgix-url-builder@0.0.4:
-    resolution: {integrity: sha512-JRLydfxGTTbSSOG82ewuCgnmw/CzIPzoDqpP3UYD7RE+QWS8ZZbpF87ZuRqtcbEKdxahRsExinuKRxPZVvukWA==}
-    engines: {node: '>=12.7.0'}
-
   imgix-url-builder@0.0.5:
     resolution: {integrity: sha512-dCx3UlXghtsjySoqVCcHQHRikqDummwQEfKlxBUK/wrMzd+1ox/XX+zhqVuXKMVuZvCc84pVLEJyntQB0OOi/w==}
     engines: {node: '>=12.7.0'}
@@ -1518,6 +1424,9 @@ packages:
 
   joi@17.13.3:
     resolution: {integrity: sha512-otDA4ldcIx+ZXsKHWmp0YizCweVRZG96J10b0FevjfuncLO1oX59THoAmHkNubYJ+9gWsYsp5k8v4ib6oDv1fA==}
+
+  jose@5.10.0:
+    resolution: {integrity: sha512-s+3Al/p9g32Iq+oqXxkW//7jk2Vig6FF1CFqzVXoTUXt2qz89YWbL+OwS17NFYEvxC35n0FKeGO2LGYSxeM2Gg==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -1755,10 +1664,6 @@ packages:
 
   negotiator@0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
-    engines: {node: '>= 0.6'}
-
-  negotiator@0.6.4:
-    resolution: {integrity: sha512-myRT3DiWPHqho5PrJaIRyaMv2kgYf0mUVgBNOYMuCH5Ki1yEiQaf/ZJuQ62nvpc44wL5WDbTX7yGJi1Neevw8w==}
     engines: {node: '>= 0.6'}
 
   neo-async@2.6.2:
@@ -2148,8 +2053,8 @@ packages:
   simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
 
-  slice-machine-ui@1.26.0:
-    resolution: {integrity: sha512-+CADPpC9Pc66LoO8GLY+NlGniL3sqrM+8tC8eRPncrljmVRg1loCwTlDDIW2qqs5GUDjidUKrqbqq6W1sESNMg==}
+  slice-machine-ui@2.14.2:
+    resolution: {integrity: sha512-xxJURmCYH5ccTIsPi142QJ2YK6k6Osv7Z11ufttxn2QcI4/rVO13i12dXwmERpOQQBJmePv5h4hoZaba93hKNw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2182,8 +2087,8 @@ packages:
   spdx-license-ids@3.0.21:
     resolution: {integrity: sha512-Bvg/8F5XephndSK3JffaRqdT+gyhfqIPwDHpX80tJrF8QQRYMo8sNMeaZ2Dp5+jhwKnUmIOyFFQfHRkjJm5nXg==}
 
-  start-slicemachine@0.12.18:
-    resolution: {integrity: sha512-4nP6qoG5ag47bZjMos/gp1WQPhEoJFa9ebw1SXtG130YRPpelm0ve4Zod0FgIcWaCxdfgAjgmpq0/06QI3Yafw==}
+  start-slicemachine@0.12.51:
+    resolution: {integrity: sha512-+++0ptMgKF+LgKw0Q8+lwAue0cSpQuKaGOOOV0dvqsU+vs8I6UvXXJa1nW1Jz7Ei11n06PsPwDZvw0azp3jTTA==}
     engines: {node: '>=14.15.0'}
     hasBin: true
 
@@ -2355,9 +2260,6 @@ packages:
   uncrypto@0.1.3:
     resolution: {integrity: sha512-Ql87qFHB3s/De2ClA9e0gsnS6zXG27SkTiSJwjCc9MebbfapQfuPzumMIUMi38ezPZVNFcHI9sUIepeQfw8J8Q==}
 
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
-
   undici-types@6.20.0:
     resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
@@ -2393,10 +2295,6 @@ packages:
   utils-merge@1.0.1:
     resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==}
     engines: {node: '>= 0.4.0'}
-
-  uuid@8.3.2:
-    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
-    hasBin: true
 
   uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
@@ -2551,10 +2449,6 @@ snapshots:
     dependencies:
       tslib: 2.8.1
     optional: true
-
-  '@formatjs/intl-localematcher@0.5.10':
-    dependencies:
-      tslib: 2.8.1
 
   '@hapi/hoek@9.3.0': {}
 
@@ -2714,15 +2608,6 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.1
 
-  '@prismicio/api-renderer@1.0.0(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))':
-    dependencies:
-      '@prismicio/types-internal': 1.5.3(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))
-      fp-ts: 2.16.9
-      io-ts: 2.2.22(fp-ts@2.16.9)
-      io-ts-types: 0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9)))
-      tslib: 2.8.1
-      uuid: 8.3.2
-
   '@prismicio/api-renderer@6.4.0(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))':
     dependencies:
       '@prismicio/types-internal': 3.8.0(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))
@@ -2740,18 +2625,9 @@ snapshots:
     dependencies:
       '@prismicio/client': 7.17.0
 
-  '@prismicio/mocks@2.0.0':
+  '@prismicio/custom-types-client@2.1.0(@prismicio/client@7.17.0)':
     dependencies:
-      '@prismicio/api-renderer': 1.0.0(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))
-      '@prismicio/types-internal': 2.0.0-alpha.8(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))
-      fp-ts: 2.16.9
-      io-ts: 2.2.22(fp-ts@2.16.9)
-      io-ts-types: 0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9)))
-      lorem-ipsum: 2.0.8
-      monocle-ts: 2.3.13(fp-ts@2.16.9)
-      newtype-ts: 0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))
-      tslib: 2.8.1
-      uuid: 8.3.2
+      '@prismicio/client': 7.17.0
 
   '@prismicio/mocks@2.12.0':
     dependencies:
@@ -2766,59 +2642,24 @@ snapshots:
       tslib: 2.8.1
       uuid: 9.0.1
 
-  '@prismicio/next@1.7.2(@prismicio/client@7.17.0)(next@15.2.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)':
+  '@prismicio/next@2.0.1(@prismicio/client@7.17.0)(next@15.2.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@formatjs/intl-localematcher': 0.5.10
       '@prismicio/client': 7.17.0
-      imgix-url-builder: 0.0.4
-      negotiator: 0.6.4
+      imgix-url-builder: 0.0.5
       next: 15.2.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react: 19.1.0
 
-  '@prismicio/react@2.9.2(@prismicio/client@7.17.0)(react@19.1.0)':
+  '@prismicio/react@3.2.0(@prismicio/client@7.17.0)(react@19.1.0)':
     dependencies:
       '@prismicio/client': 7.17.0
-      '@prismicio/richtext': 2.1.5
+      esm-env: 1.2.2
       react: 19.1.0
-
-  '@prismicio/richtext@2.1.5':
-    dependencies:
-      '@prismicio/types': 0.2.9
 
   '@prismicio/simulator@0.1.4':
     dependencies:
       '@prismicio/client': 7.17.0
       '@types/statuses': 2.0.5
       statuses: 2.0.1
-
-  '@prismicio/types-internal@1.5.3(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))':
-    dependencies:
-      fp-ts: 2.16.9
-      io-ts: 2.2.22(fp-ts@2.16.9)
-      io-ts-types: 0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9)))
-      monocle-ts: 2.3.13(fp-ts@2.16.9)
-      newtype-ts: 0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))
-      tslib: 2.8.1
-
-  '@prismicio/types-internal@2.0.0-alpha.8(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))':
-    dependencies:
-      fp-ts: 2.16.9
-      io-ts: 2.2.22(fp-ts@2.16.9)
-      io-ts-types: 0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9)))
-      monocle-ts: 2.3.13(fp-ts@2.16.9)
-      newtype-ts: 0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))
-      tslib: 2.8.1
-
-  '@prismicio/types-internal@2.8.0(@types/uuid@9.0.8)(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))(uuid@9.0.1)':
-    dependencies:
-      '@types/uuid': 9.0.8
-      fp-ts: 2.16.9
-      io-ts: 2.2.22(fp-ts@2.16.9)
-      io-ts-types: 0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9)))
-      monocle-ts: 2.3.13(fp-ts@2.16.9)
-      newtype-ts: 0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))
-      tslib: 2.8.1
-      uuid: 9.0.1
 
   '@prismicio/types-internal@3.8.0(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))':
     dependencies:
@@ -2830,42 +2671,8 @@ snapshots:
       tslib: 2.8.1
       uuid: 9.0.1
 
-  '@prismicio/types@0.2.9': {}
-
-  '@radix-ui/react-compose-refs@1.0.1(@types/react@19.0.12)(react@19.1.0)':
-    dependencies:
-      '@babel/runtime': 7.27.0
-      react: 19.1.0
-    optionalDependencies:
-      '@types/react': 19.0.12
-
-  '@radix-ui/react-primitive@1.0.3(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
-    dependencies:
-      '@babel/runtime': 7.27.0
-      '@radix-ui/react-slot': 1.0.2(@types/react@19.0.12)(react@19.1.0)
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
-    optionalDependencies:
-      '@types/react': 19.0.12
-      '@types/react-dom': 19.0.4(@types/react@19.0.12)
-
-  '@radix-ui/react-slot@1.0.2(@types/react@19.0.12)(react@19.1.0)':
-    dependencies:
-      '@babel/runtime': 7.27.0
-      '@radix-ui/react-compose-refs': 1.0.1(@types/react@19.0.12)(react@19.1.0)
-      react: 19.1.0
-    optionalDependencies:
-      '@types/react': 19.0.12
-
-  '@radix-ui/react-visually-hidden@1.0.3(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
-    dependencies:
-      '@babel/runtime': 7.27.0
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
-    optionalDependencies:
-      '@types/react': 19.0.12
-      '@types/react-dom': 19.0.4(@types/react@19.0.12)
+  '@prismicio/types@0.2.9':
+    optional: true
 
   '@react-email/render@1.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
@@ -2932,20 +2739,24 @@ snapshots:
 
   '@scarf/scarf@1.4.0': {}
 
-  '@segment/analytics-core@1.3.2':
+  '@segment/analytics-core@1.8.1':
     dependencies:
       '@lukeed/uuid': 2.0.1
+      '@segment/analytics-generic-utils': 1.2.0
       dset: 3.1.4
       tslib: 2.8.1
 
-  '@segment/analytics-generic-utils@1.0.0': {}
+  '@segment/analytics-generic-utils@1.2.0':
+    dependencies:
+      tslib: 2.8.1
 
-  '@segment/analytics-node@1.1.3':
+  '@segment/analytics-node@2.2.1':
     dependencies:
       '@lukeed/uuid': 2.0.1
-      '@segment/analytics-core': 1.3.2
-      '@segment/analytics-generic-utils': 1.0.0
+      '@segment/analytics-core': 1.8.1
+      '@segment/analytics-generic-utils': 1.2.0
       buffer: 6.0.3
+      jose: 5.10.0
       node-fetch: 2.7.0
       tslib: 2.8.1
     transitivePeerDependencies:
@@ -2982,15 +2793,16 @@ snapshots:
     transitivePeerDependencies:
       - '@prismicio/types'
 
-  '@slicemachine/manager@0.18.3(@prismicio/client@7.17.0)(@prismicio/types@0.2.9)(@types/uuid@9.0.8)(uuid@9.0.1)':
+  '@slicemachine/manager@0.24.9(@prismicio/types@0.2.9)':
     dependencies:
       '@antfu/ni': 0.20.0
-      '@prismicio/custom-types-client': 1.3.1(@prismicio/client@7.17.0)
-      '@prismicio/mocks': 2.0.0
-      '@prismicio/types-internal': 2.8.0(@types/uuid@9.0.8)(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))(uuid@9.0.1)
-      '@segment/analytics-node': 1.1.3
-      '@slicemachine/plugin-kit': 0.4.38(@prismicio/client@7.17.0)(@prismicio/types@0.2.9)
-      cookie: 0.5.0
+      '@prismicio/client': 7.17.0
+      '@prismicio/custom-types-client': 2.1.0(@prismicio/client@7.17.0)
+      '@prismicio/mocks': 2.12.0
+      '@prismicio/types-internal': 3.8.0(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))
+      '@segment/analytics-node': 2.2.1
+      '@slicemachine/plugin-kit': 0.4.71(@prismicio/types@0.2.9)
+      cookie: 1.0.2
       cors: 2.8.5
       execa: 7.2.0
       file-type: 18.7.0
@@ -3007,29 +2819,11 @@ snapshots:
       prettier: 3.5.3
       r19: 0.1.8
       rc9: 2.1.2
+      readable-web-to-node-stream: 3.0.4
       semver: 7.7.1
     transitivePeerDependencies:
-      - '@prismicio/client'
       - '@prismicio/types'
-      - '@types/uuid'
       - encoding
-      - uuid
-
-  '@slicemachine/plugin-kit@0.4.38(@prismicio/client@7.17.0)(@prismicio/types@0.2.9)':
-    dependencies:
-      common-tags: 1.8.2
-      defu: 6.1.4
-      dotenv: 16.3.1
-      fp-ts: 2.16.9
-      fs-extra: 11.1.1
-      io-ts: 2.2.22(fp-ts@2.16.9)
-      io-ts-reporters: 2.0.1(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))
-      p-limit: 4.0.0
-      prettier: 3.5.3
-      prismic-ts-codegen: 0.1.25(@prismicio/client@7.17.0)(@prismicio/types@0.2.9)
-    transitivePeerDependencies:
-      - '@prismicio/client'
-      - '@prismicio/types'
 
   '@slicemachine/plugin-kit@0.4.71(@prismicio/types@0.2.9)':
     dependencies:
@@ -3143,15 +2937,11 @@ snapshots:
 
   '@types/http-proxy@1.17.16':
     dependencies:
-      '@types/node': 20.17.28
+      '@types/node': 22.13.14
 
   '@types/json-schema@7.0.15': {}
 
   '@types/minimist@1.2.5': {}
-
-  '@types/node@20.17.28':
-    dependencies:
-      undici-types: 6.19.8
 
   '@types/node@22.13.14':
     dependencies:
@@ -3185,8 +2975,6 @@ snapshots:
       '@webgpu/types': 0.1.60
       fflate: 0.8.2
       meshoptimizer: 0.18.1
-
-  '@types/uuid@9.0.8': {}
 
   '@types/webxr@0.5.21': {}
 
@@ -3448,9 +3236,9 @@ snapshots:
 
   cookie-signature@1.0.6: {}
 
-  cookie@0.5.0: {}
-
   cookie@0.7.1: {}
+
+  cookie@1.0.2: {}
 
   cors@2.8.5:
     dependencies:
@@ -3577,6 +3365,8 @@ snapshots:
     dependencies:
       esrecurse: 4.3.0
       estraverse: 4.3.0
+
+  esm-env@1.2.2: {}
 
   esrecurse@4.3.0:
     dependencies:
@@ -3841,8 +3631,6 @@ snapshots:
 
   ieee754@1.2.1: {}
 
-  imgix-url-builder@0.0.4: {}
-
   imgix-url-builder@0.0.5: {}
 
   immediate@3.0.6: {}
@@ -3929,6 +3717,8 @@ snapshots:
       '@sideway/address': 4.1.5
       '@sideway/formula': 3.0.1
       '@sideway/pinpoint': 2.0.0
+
+  jose@5.10.0: {}
 
   js-tokens@4.0.0: {}
 
@@ -4113,8 +3903,6 @@ snapshots:
   nanoid@3.3.11: {}
 
   negotiator@0.6.3: {}
-
-  negotiator@0.6.4: {}
 
   neo-async@2.6.2: {}
 
@@ -4549,25 +4337,17 @@ snapshots:
       is-arrayish: 0.3.2
     optional: true
 
-  slice-machine-ui@1.26.0(@prismicio/client@7.17.0)(@prismicio/types@0.2.9)(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(@types/uuid@9.0.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(uuid@9.0.1):
+  slice-machine-ui@2.14.2(@prismicio/types@0.2.9):
     dependencies:
-      '@radix-ui/react-visually-hidden': 1.0.3(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@slicemachine/manager': 0.18.3(@prismicio/client@7.17.0)(@prismicio/types@0.2.9)(@types/uuid@9.0.8)(uuid@9.0.1)
-      start-slicemachine: 0.12.18(@prismicio/client@7.17.0)(@prismicio/types@0.2.9)(@types/uuid@9.0.8)(uuid@9.0.1)
+      '@slicemachine/manager': 0.24.9(@prismicio/types@0.2.9)
+      start-slicemachine: 0.12.51(@prismicio/types@0.2.9)
     transitivePeerDependencies:
-      - '@prismicio/client'
       - '@prismicio/types'
       - '@types/express'
-      - '@types/react'
-      - '@types/react-dom'
-      - '@types/uuid'
       - debug
       - encoding
       - msw
-      - react
-      - react-dom
       - supports-color
-      - uuid
 
   sonner@2.0.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
@@ -4597,11 +4377,11 @@ snapshots:
 
   spdx-license-ids@3.0.21: {}
 
-  start-slicemachine@0.12.18(@prismicio/client@7.17.0)(@prismicio/types@0.2.9)(@types/uuid@9.0.8)(uuid@9.0.1):
+  start-slicemachine@0.12.51(@prismicio/types@0.2.9):
     dependencies:
       '@prismicio/mocks': 2.12.0
-      '@prismicio/types-internal': 2.8.0(@types/uuid@9.0.8)(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))(uuid@9.0.1)
-      '@slicemachine/manager': 0.18.3(@prismicio/client@7.17.0)(@prismicio/types@0.2.9)(@types/uuid@9.0.8)(uuid@9.0.1)
+      '@prismicio/types-internal': 3.8.0(fp-ts@2.16.9)(io-ts-types@0.5.19(fp-ts@2.16.9)(io-ts@2.2.22(fp-ts@2.16.9))(monocle-ts@2.3.13(fp-ts@2.16.9))(newtype-ts@0.3.5(fp-ts@2.16.9)(monocle-ts@2.3.13(fp-ts@2.16.9))))(io-ts@2.2.22(fp-ts@2.16.9))
+      '@slicemachine/manager': 0.24.9(@prismicio/types@0.2.9)
       body-parser: 1.20.3
       chalk: 4.1.2
       cors: 2.8.5
@@ -4617,15 +4397,12 @@ snapshots:
       open: 8.4.2
       serve-static: 1.16.2
     transitivePeerDependencies:
-      - '@prismicio/client'
       - '@prismicio/types'
       - '@types/express'
-      - '@types/uuid'
       - debug
       - encoding
       - msw
       - supports-color
-      - uuid
 
   stats-gl@2.4.2(@types/three@0.175.0)(three@0.175.0):
     dependencies:
@@ -4766,8 +4543,6 @@ snapshots:
 
   uncrypto@0.1.3: {}
 
-  undici-types@6.19.8: {}
-
   undici-types@6.20.0: {}
 
   universalify@2.0.1: {}
@@ -4793,8 +4568,6 @@ snapshots:
   utility-types@3.11.0: {}
 
   utils-merge@1.0.1: {}
-
-  uuid@8.3.2: {}
 
   uuid@9.0.1: {}
 

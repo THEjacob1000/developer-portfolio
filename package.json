@@ -13,8 +13,8 @@
 	},
 	"dependencies": {
 		"@prismicio/client": "^7.17.0",
-		"@prismicio/next": "^1.7.2",
-		"@prismicio/react": "^2.9.2",
+		"@prismicio/next": "^2.0.1",
+		"@prismicio/react": "^3.2.0",
 		"@react-three/drei": "^10.0.5",
 		"@react-three/fiber": "^9.1.0",
 		"class-variance-authority": "^0.7.1",
@@ -43,7 +43,7 @@
 		"@types/react-dom": "19.0.4",
 		"@types/three": "^0.175.0",
 		"postcss": "^8.5.3",
-		"slice-machine-ui": "^1.26.0",
+		"slice-machine-ui": "^2.14.2",
 		"tailwindcss": "^4.0.17",
 		"typescript": "^5.8.2"
 	},

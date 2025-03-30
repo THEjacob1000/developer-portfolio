@@ -3,8 +3,6 @@ import Heading from "@/components/Heading";
 import type { Content } from "@prismicio/client";
 import { PrismicRichText, type SliceComponentProps } from "@prismicio/react";
 
-import type { JSX } from "react";
-
 /**
  * Props for `Experience`.
  */
@@ -22,7 +20,7 @@ const Experience = ({ slice }: ExperienceProps) => {
 			<Heading as="h2" size="lg">
 				{slice.primary.heading}
 			</Heading>
-			{slice.items.map((item, index) => (
+			{slice.items.map((item) => (
 				<div
 					key={item.time_period}
 					className="ml-6 mt-8 max-w-prose md:ml-12 md:mt-16"

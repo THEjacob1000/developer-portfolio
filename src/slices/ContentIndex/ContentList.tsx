@@ -2,7 +2,6 @@
 
 import { type Content, asImageSrc, isFilled } from "@prismicio/client";
 import gsap from "gsap";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -32,7 +31,7 @@ const ContentList = ({
 	useEffect(() => {
 		// Animate list-items in with a stagger
 		const ctx = gsap.context(() => {
-			itemsRef.current.forEach((item, index) => {
+			for (const item of itemsRef.current) {
 				gsap.fromTo(
 					item,
 					{
@@ -53,7 +52,7 @@ const ContentList = ({
 						},
 					},
 				);
-			});
+			}
 
 			return () => ctx.revert(); // cleanup!
 		}, component);

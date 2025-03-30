@@ -2,8 +2,6 @@ import type { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import type { SliceComponentProps } from "@prismicio/react";
 
-import type { JSX } from "react";
-
 /**
  * Props for `ImageBlock`.
  */

@@ -2,11 +2,8 @@ import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import type { Content } from "@prismicio/client";
-import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText, type SliceComponentProps } from "@prismicio/react";
 import Avatar from "./Avatar";
-
-import type { JSX } from "react";
 
 /**
  * Props for `Biography`.

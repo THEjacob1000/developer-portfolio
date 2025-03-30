@@ -3,7 +3,7 @@ import type { Content } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
 import Heading from "@/components/Heading";
 import Bounded from "@/components/Bounded";
-import { useState, type JSX } from "react";
+import { useState, } from "react";
 import type { FormEvent } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { useRouter } from "next/navigation";

@@ -8,7 +8,7 @@ import Avatar from "./Avatar";
 /**
  * Props for `Biography`.
  */
-export type BiographyProps = SliceComponentProps<Content.BiographySlice>;
+type BiographyProps = SliceComponentProps<Content.BiographySlice>;
 
 /**
  * Component for "Biography" Slices.

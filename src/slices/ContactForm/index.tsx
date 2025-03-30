@@ -21,7 +21,7 @@ import { z } from "zod";
 /**
  * Props for `ContactForm`.
  */
-export type ContactFormProps = SliceComponentProps<Content.ContactFormSlice>;
+type ContactFormProps = SliceComponentProps<Content.ContactFormSlice>;
 
 const formSchema = z.object({
 	name: z.string().min(1),

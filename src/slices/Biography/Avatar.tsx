@@ -1,8 +1,8 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import type { ImageField } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
-import clsx from "clsx";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
@@ -71,7 +71,7 @@ const Avatar = ({ image, className }: AvatarProps) => {
 	}, []);
 
 	return (
-		<div ref={component} className={clsx("relative h-full w-full", className)}>
+		<div ref={component} className={cn("relative h-full w-full", className)}>
 			<div className="avatar opacity-0f aspect-square overflow-hidden rounded-3xl border-2 border-slate-700">
 				<PrismicNextImage
 					field={image}

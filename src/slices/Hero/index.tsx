@@ -4,12 +4,12 @@ import Shapes from "./Shapes";
 import type { Content, KeyTextField } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
 import { gsap } from "gsap";
-import { useEffect, useRef, } from "react";
+import { useEffect, useRef } from "react";
 
 /**
  * Props for `Hero`.
  */
-export type HeroProps = SliceComponentProps<Content.HeroSlice>;
+type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
 /**
  * Component for "Hero" Slices.

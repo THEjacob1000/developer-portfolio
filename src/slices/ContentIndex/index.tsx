@@ -10,7 +10,7 @@ import type { JSX } from "react";
 /**
  * Props for `ContentIndex`.
  */
-export type ContentIndexProps = SliceComponentProps<Content.ContentIndexSlice>;
+type ContentIndexProps = SliceComponentProps<Content.ContentIndexSlice>;
 
 /**
  * Component for "ContentIndex" Slices.
